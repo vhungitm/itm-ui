@@ -1,0 +1,43 @@
+.field-control {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &.icon-start {
+    .icon-start {
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      left: 12px;
+
+      width: 16px;
+      height: 16px;
+    }
+
+    .form-control {
+      padding-left: 32px;
+    }
+  }
+
+  &.icon-end {
+    .icon-end {
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      right: 12px;
+
+      width: 16px;
+      height: 16px;
+    }
+
+    .form-control {
+      padding-right: 32px;
+    }
+  }
+}
+
+.invalid-feedback {
+  display: block;
+}

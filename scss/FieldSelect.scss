@@ -1,0 +1,47 @@
+.field-select {
+  position: relative;
+
+  &.icon-start {
+    .icon-start {
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      top: calc(50% - 8px);
+      left: 12px;
+
+      width: 16px;
+      height: 16px;
+
+      z-index: 1;
+    }
+
+    .react-select-container {
+      .react-select__control {
+        .react-select__value-container {
+          padding-left: 32px;
+        }
+      }
+    }
+  }
+
+  &.icon-end {
+    .icon-end {
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      top: calc(50% - 8px);
+      right: 12px;
+
+      width: 16px;
+      height: 16px;
+    }
+
+    .react-select-container {
+      .react-select__control {
+        padding-right: 32px;
+      }
+    }
+  }
+}

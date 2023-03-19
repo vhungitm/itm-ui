@@ -1,0 +1,22 @@
+.ck {
+  .ck-toolbar {
+    border-radius: 4px 4px 0 0 !important;
+  }
+
+  .ck-editor__editable {
+    border-radius: 0 0 4px 4px !important;
+    box-shadow: unset !important;
+    max-height: 500px;
+    overflow: auto;
+  }
+}
+
+.is-invalid .ck {
+  .ck-toolbar {
+    border-color: #dc3545;
+  }
+
+  &.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+    border-color: #dc3545;
+  }
+}
