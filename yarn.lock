@@ -6185,10 +6185,10 @@ istanbul-reports@^3.0.5:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-itm-ckeditor@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/itm-ckeditor/-/itm-ckeditor-1.0.2.tgz#410744d5d6383473aaa6c9a255a66a76b3e8f501"
-  integrity sha512-YHSkFABeXgR7F3i47PP24qBw8XrY/i8IJAejPry4AD6M+ZY4iUlYop7nXyJmPPif8PD7merKrK0Z7lNtorlDlQ==
+itm-ckeditor@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/itm-ckeditor/-/itm-ckeditor-1.0.3.tgz#528604df3fa312d456e2a1348f251aa1445acde5"
+  integrity sha512-Txzg2smOFzBGCJkG8GcwdP41WnCCbFcft8jXlpCyOlwy/omwWbm3VlMO2ln+bvTWVeIQl1vkXnOoHaAn1lrxCQ==
   dependencies:
     "@ckeditor/ckeditor5-adapter-ckfinder" "^36.0.1"
     "@ckeditor/ckeditor5-autoformat" "^36.0.1"
