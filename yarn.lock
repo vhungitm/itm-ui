@@ -1213,6 +1213,13 @@
   dependencies:
     ckeditor5 "^36.0.1"
 
+"@ckeditor/ckeditor5-font@^36.0.1":
+  version "36.0.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-font/-/ckeditor5-font-36.0.1.tgz#9498b403188580d469a274fd0904fb8f71796ced"
+  integrity sha512-mn6nAG9AQ7bC7ywsEf5+pE09yhPSGupttfZ94bzjqTtQAAEahkiD/ympzfypWyJWCkTUlqa0/ZmF22nqcNlTEQ==
+  dependencies:
+    ckeditor5 "^36.0.1"
+
 "@ckeditor/ckeditor5-heading@^36.0.1":
   version "36.0.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-heading/-/ckeditor5-heading-36.0.1.tgz#2fc3b81e8f33789f3a5ccb640ab9cca2345bdf83"
@@ -2851,6 +2858,11 @@ boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.0.tgz#0718a7cc29040ee8dbf1bd652b896f3436a87c29"
+  integrity sha512-UnBV3E3v4STVNQdms6jSGO2CvOkjUMdDAVR2V5N4uCMdaIkaQjbcEAMqRimDHIs4uqBYzDAKCQwCB+97tJgHQw==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -3108,7 +3120,7 @@ cherry-pick@^0.5.0:
     tiny-glob "^0.2.6"
     yargs "^13.2.4"
 
-chokidar@3.5.3, chokidar@^3.4.0, chokidar@^3.5.1:
+chokidar@3.5.3, "chokidar@>=3.0.0 <4.0.0", chokidar@^3.4.0, chokidar@^3.5.1:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -5578,6 +5590,11 @@ ignore@^5.1.4, ignore@^5.1.8:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
+immutable@^4.0.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.0.tgz#eb1738f14ffb39fd068b1dbe1296117484dd34be"
+  integrity sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==
+
 import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.2.tgz#fc129c160c5d68235507f4331a6baad186bdbc3e"
@@ -6185,10 +6202,10 @@ istanbul-reports@^3.0.5:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-itm-ckeditor@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/itm-ckeditor/-/itm-ckeditor-1.0.3.tgz#528604df3fa312d456e2a1348f251aa1445acde5"
-  integrity sha512-Txzg2smOFzBGCJkG8GcwdP41WnCCbFcft8jXlpCyOlwy/omwWbm3VlMO2ln+bvTWVeIQl1vkXnOoHaAn1lrxCQ==
+itm-ckeditor@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/itm-ckeditor/-/itm-ckeditor-1.0.4.tgz#f9ec4e831f247355f0be335b4c6416bd6d8df49b"
+  integrity sha512-Ersi+avjD+AGsBCBNmEKREiqEwJzkF8qs1MAQnezJ/WarvAY7XvL8mftt8N3DlssYRKir3BkZpi3yE4VtukfjA==
   dependencies:
     "@ckeditor/ckeditor5-adapter-ckfinder" "^36.0.1"
     "@ckeditor/ckeditor5-autoformat" "^36.0.1"
@@ -6200,6 +6217,7 @@ itm-ckeditor@^1.0.3:
     "@ckeditor/ckeditor5-easy-image" "^36.0.1"
     "@ckeditor/ckeditor5-editor-classic" "^36.0.1"
     "@ckeditor/ckeditor5-essentials" "^36.0.1"
+    "@ckeditor/ckeditor5-font" "^36.0.1"
     "@ckeditor/ckeditor5-heading" "^36.0.1"
     "@ckeditor/ckeditor5-image" "^36.0.1"
     "@ckeditor/ckeditor5-indent" "^36.0.1"
@@ -8567,6 +8585,15 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+sass@^1.63.6:
+  version "1.63.6"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.63.6.tgz#481610e612902e0c31c46b46cf2dad66943283ea"
+  integrity sha512-MJuxGMHzaOW7ipp+1KdELtqKbfAWbH7OLIdoSMnVe3EXPMTmxTmlaZDCTsgIpPCs3w99lLo9/zDKkOrJuT5byw==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
 scheduler@^0.19.1:
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
@@ -8817,6 +8844,11 @@ socket.io@^4.4.1:
     engine.io "~6.2.0"
     socket.io-adapter "~2.4.0"
     socket.io-parser "~4.0.4"
+
+"source-map-js@>=0.6.2 <2.0.0":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
+  integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
 source-map-resolve@^0.5.0:
   version "0.5.3"

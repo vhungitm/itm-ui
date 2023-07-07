@@ -7,6 +7,25 @@
     border-radius: 0 0 4px 4px !important;
     box-shadow: unset !important;
   }
+
+  .ck-list {
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      background: #efefef;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #e0e0e0;
+    }
+
+    .ck-list__item .ck-button .ck-button__label {
+      font-size: 14px !important;
+    }
+  }
 }
 
 .is-invalid .ck {

@@ -40,10 +40,12 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-react": "^5.1.0",
-    "itm-ckeditor": "^1.0.3",
+    "bootstrap": "^5.3.0",
+    "itm-ckeditor": "^1.0.4",
     "react-bootstrap": "^2.7.2",
     "react-hook-form": "^7.43.7",
-    "react-select": "^5.7.0"
+    "react-select": "^5.7.0",
+    "sass": "^1.63.6"
   },
   "devDependencies": {
     "@4c/rollout": "^4.0.2",
