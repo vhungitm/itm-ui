@@ -1,6 +1,6 @@
+import { FieldIcon, FieldIconEndProps, FieldIconStartProps } from './FieldIcon';
 import * as React from 'react';
 import Select, { Props } from 'react-select';
-import { FieldIcon, FieldIconEndProps, FieldIconStartProps } from './FieldIcon';
 
 export interface FieldSelectOptionsProps {
   label: string;
@@ -27,6 +27,7 @@ export const FieldSelect = (props: FieldSelectProps) => {
     placeholder = '',
     iconStart,
     iconEnd,
+    isMulti,
     onChange,
     ...selectProps
   } = props;
@@ -43,21 +44,50 @@ export const FieldSelect = (props: FieldSelectProps) => {
 
   if (isInvalid) className += ' is-invalid';
 
-  const handleChange = (selectedValue: any) => {
+  const handleChange = (
+    selectedValue: FieldSelectOptionsProps | FieldSelectOptionsProps[],
+  ) => {
     if (onChange)
       onChange({
         target: {
           name: selectProps.name,
-          value: selectedValue.value,
+          value: isMulti
+            ? (selectedValue as FieldSelectOptionsProps[]).map(
+                (item: FieldSelectOptionsProps) => item.value,
+              )
+            : (selectedValue as FieldSelectOptionsProps).value,
         },
       });
+  };
+
+  const getValues = () => {
+    if (isMulti) {
+      if (value) {
+        let result: FieldSelectOptionsProps[] = [];
+
+        value.forEach((item: any) => {
+          const optionItem: FieldSelectOptionsProps = options.find(
+            (x: FieldSelectOptionsProps) => x.value === item,
+          ) as FieldSelectOptionsProps;
+
+          if (optionItem) result.push(optionItem);
+        });
+
+        return result;
+      }
+    } else {
+      return options.find(
+        (item: FieldSelectOptionsProps) => item.value === value,
+      );
+    }
   };
 
   return (
     <div className={controlGroupClassName}>
       {iconStart && <FieldIcon {...iconStart} name="iconStart" />}
       <Select
-        value={options.find((item: any) => item.value === value)}
+        value={getValues()}
+        isMulti={isMulti}
         options={options}
         placeholder={placeholder}
         className={className}
