@@ -6,7 +6,7 @@ import { FieldCheckGroup, FieldCheckGroupProps } from './FieldCheckGroup';
 import { FieldFeedbackProps } from './FieldFeedback';
 
 export interface FormFieldCheckGroupElementProps extends FieldCheckProps {
-  control: Control;
+  control: Control<any, any>;
   name: string;
 }
 
