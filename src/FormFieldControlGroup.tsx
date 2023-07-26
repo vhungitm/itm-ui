@@ -5,7 +5,7 @@ import { FieldControlGroup, FieldControlGroupProps } from './FieldControlGroup';
 import { FieldFeedbackProps } from './FieldFeedback';
 
 export interface FormFieldControlGroupElementProps extends FieldControlProps {
-  control: Control;
+  control: Control<any, any>;
   name: string;
 }
 
