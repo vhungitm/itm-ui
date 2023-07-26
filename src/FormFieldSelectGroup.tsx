@@ -6,7 +6,7 @@ import { FieldSelectProps } from './FieldSelect';
 import { FieldSelectGroup, FieldSelectGroupProps } from './FieldSelectGroup';
 
 export interface FormFieldSelectElementGroupProps extends FieldSelectProps {
-  control: Control;
+  control: Control<any, any>;
   name: string;
 }
 
