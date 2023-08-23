@@ -1,6 +1,6 @@
 {
   "name": "itm-ui",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "ITM UI",
   "keywords": [
     "react",
@@ -41,7 +41,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-react": "^6.1.0",
     "bootstrap": "^5.3.0",
-    "itm-ckeditor": "^1.0.8",
+    "itm-ckeditor": "^1.0.9",
     "react-bootstrap": "^2.7.2",
     "react-hook-form": "^7.43.7",
     "react-select": "^5.7.0",
