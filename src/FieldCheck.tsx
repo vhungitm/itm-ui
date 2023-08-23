@@ -20,16 +20,14 @@ export const FieldCheck = (props: FieldCheckProps) => {
   const {
     name,
     type = 'checkbox',
-    value = '',
+    value = true,
     options = [],
-    groupValue = '',
+    groupValue,
     setGroupValue = () => {},
     ...checkProps
   } = props;
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (!setGroupValue) return;
-
     let { value: eventValue, checked } = e.target;
 
     setGroupValue(
@@ -40,7 +38,9 @@ export const FieldCheck = (props: FieldCheckProps) => {
           ? [...groupValue, eventValue]
           : true
         : options.length >= 2
-        ? groupValue.filter((item: string) => item !== eventValue)
+        ? groupValue.filter(
+            (item: string) => item.toString() !== eventValue.toString(),
+          )
         : false,
     );
   };
@@ -54,14 +54,16 @@ export const FieldCheck = (props: FieldCheckProps) => {
       }
       checked={
         type === 'radio'
-          ? groupValue !== undefined
-            ? groupValue === value
-            : value
+          ? groupValue !== undefined && groupValue !== null
+            ? groupValue.toString() === value.toString()
+            : groupValue
           : options.length >= 2
-          ? groupValue.findIndex((item: string) => item === value) >= 0
+          ? groupValue.findIndex(
+              (item: string) => item.toString() === value.toString(),
+            ) >= 0
           : groupValue
       }
-      onChange={handleChange}
+      onChange={setGroupValue && handleChange}
       {...checkProps}
     />
   );

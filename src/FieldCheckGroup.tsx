@@ -1,13 +1,21 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { FormGroupProps } from 'react-bootstrap';
-import { FieldCheck, FieldCheckProps } from './FieldCheck';
+import {
+  FieldCheck,
+  FieldCheckOptionsProps,
+  FieldCheckProps,
+} from './FieldCheck';
 import { FieldFeedback, FieldFeedbackProps } from './FieldFeedback';
 import { FieldLabel, FieldLabelProps } from './FieldLabel';
 
+export interface FieldCheckGroupElementProps extends FieldCheckProps {
+  options: FieldCheckOptionsProps[];
+}
+
 export interface FieldCheckGroupProps extends FormGroupProps {
   label?: FieldLabelProps;
-  element: FieldCheckProps;
+  element: FieldCheckGroupElementProps;
   error?: FieldFeedbackProps;
 }
 

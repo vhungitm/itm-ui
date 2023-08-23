@@ -1,11 +1,15 @@
 import * as React from 'react';
 import { ChangeEvent } from 'react';
 import { Control, useController } from 'react-hook-form';
-import { FieldCheckProps } from './FieldCheck';
-import { FieldCheckGroup, FieldCheckGroupProps } from './FieldCheckGroup';
+import {
+  FieldCheckGroup,
+  FieldCheckGroupElementProps,
+  FieldCheckGroupProps,
+} from './FieldCheckGroup';
 import { FieldFeedbackProps } from './FieldFeedback';
 
-export interface FormFieldCheckGroupElementProps extends FieldCheckProps {
+export interface FormFieldCheckGroupElementProps
+  extends FieldCheckGroupElementProps {
   control: Control<any, any>;
   name: string;
 }

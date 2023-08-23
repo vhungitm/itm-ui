@@ -1,23 +1,28 @@
-declare module 'itm-ckeditor' {
-  const ClassicEditorBuild: any;
-  export = ClassicEditorBuild;
-}
-
 declare module '@ckeditor/ckeditor5-react' {
+  import type { EventInfo } from '@ckeditor/ckeditor5-utils';
   import ClassicEditor from 'itm-ckeditor';
   import * as React from 'react';
+  import { WatchdogConfig } from '@ckeditor/ckeditor5-watchdog/src/watchdog';
+  import { EditorConfig } from '@ckeditor/ckeditor5-core';
+
+  export interface CKEditorErrorDetails {
+    phase: 'initialization' | 'runtime';
+    willEditorRestart?: boolean;
+  }
 
   export interface CKEditorProps {
-    disabled?: boolean;
     editor: typeof ClassicEditor;
-    data?: string;
     id?: string;
-    config?: any;
+    diabled?: boolean;
+    data?: string;
+    config?: EditorConfig;
+    watchdogConfig?: WatchdogConfig;
+    disableWatchdog?: boolean;
     onReady?: (editor: typeof ClassicEditor) => void;
-    onChange?: (event: Event, editor: typeof ClassicEditor) => void;
-    onBlur?: (event: Event, editor: typeof ClassicEditor) => void;
-    onFocus?: (event: Event, editor: typeof ClassicEditor) => void;
-    onError?: (event: Event, editor: typeof ClassicEditor) => void;
+    onError?: (error: Error, details: CKEditorErrorDetails) => void;
+    onChange?: (event: EventInfo, editor: typeof ClassicEditor) => void;
+    onFocus?: (event: EventInfo, editor: typeof ClassicEditor) => void;
+    onBlur?: (event: EventInfo, editor: typeof ClassicEditor) => void;
   }
 
   export const CKEditor: React.FunctionComponent<CKEditorProps>;

@@ -3,7 +3,7 @@ import 'itm-ui/scss/itm-ui.scss';
 import * as React from 'react';
 
 const App = () => {
-  return <div className="p-5"></div>;
+  return <></>;
 };
 
 export default App;
